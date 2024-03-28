@@ -2,71 +2,121 @@
  * @Author: zyl18 zhouyl01@eastcom-sw.com
  * @Date: 2024-03-27 17:02:18
  * @LastEditors: zyl18 zhouyl01@eastcom-sw.com
- * @LastEditTime: 2024-03-27 17:07:44
+ * @LastEditTime: 2024-03-28 14:03:18
  * @FilePath: \my-news\src\layout\menu.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
+import { UserOutlined, AppstoreOutlined } from '@ant-design/icons';
+import React from "react"
 export default [
 	{
-		title: "系统管理",
+		label: "系统管理",
+		key: "system",
+		parent: "root",
+		icon: <AppstoreOutlined />,
 		path: "",
 		children: [
 			{
-				title: "基础信息管理",
+				label: "基础信息管理",
+				key: "base",
+				parent: "system",
+				icon: <AppstoreOutlined />,
 				children: [
 					{
-						title: "用户管理"
+						label: "用户管理",
+						key: "user",
+						parent: "base",
+						icon: <UserOutlined />
 					},
 					{
-						title: "角色信息",
+						label: "角色信息",
+						key: "role",
+						parent: "base",
+						icon: <AppstoreOutlined />
 					},
 					{
-						title: "菜单管理",
+						label: "菜单管理",
+						key: "menu",
+						parent: "base",
+						icon: <AppstoreOutlined />
 					}
 				]
 			},
 			{
-				title: "日志管理",
+				label: "日志管理",
+				parent: "system",
+				key: "log",
+				icon: <AppstoreOutlined />,
 				children: [
 					{
-						title: "登录日志"
+						label: "登录日志",
+						key: "loginlog",
+						parent: "log",
+						icon: <AppstoreOutlined />
 					},
 					{
-						title: "查询日志",
+						label: "查询日志",
+						key: "searchlog",
+						parent: "log",
+						icon: <AppstoreOutlined />
 					},
 				]
 			},
 		]
 	},
 	{
-		title: "项目合同管理",
+		label: "项目合同管理",
+		key: "ht",
+		parent: "root",
+		icon: <AppstoreOutlined />,
 		path: "",
 		children: [
 			{
-				title: "基础信息管理",
+				label: "基础信息管理",
+				parent: "ht",
+				key: "baseht",
+				icon: <AppstoreOutlined />,
 				children: [
 					{
-						title: "区域管理"
+						label: "区域管理",
+						key: "area",
+						parent: "baseht",
+						icon: <AppstoreOutlined />
 					},
 					{
-						title: "产品线管理",
+						label: "产品线管理",
+						key: "line",
+						parent: "baseht",
+						icon: <AppstoreOutlined />
 					},
 					{
-						title: "合同管理",
+						label: "合同管理",
+						key: "hetong",
+						parent: "baseht",
+						icon: <AppstoreOutlined />
 					}
 				]
 			},
 		]
 	},
 	{
-		title: "任务",
+		label: "任务",
+		key: "task",
+		parent: "root",
+		icon: <AppstoreOutlined />,
 		path: "",
 		children: [
 			{
-				title: "待办"
+				label: "待办",
+				key: "todo",
+				parent: "task",
+				icon: <AppstoreOutlined />
 			},
 			{
-				title: "已办",
+				label: "已办",
+				key: "done",
+				parent: "tsk",
+				icon: <AppstoreOutlined />
 			},
 		]
 	},
